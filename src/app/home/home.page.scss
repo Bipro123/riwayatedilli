@@ -1,0 +1,57 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.gamecanvas{
+border:3px solid black;
+}
+.parafoot{
+	position:fixed;
+	font-size: 0.9rem;
+	padding-left: 0.75rem;
+	padding-right: 0.85rem;
+	padding-top: 0.2rem;
+	top:2px;
+}
+.home_head{
+	font-size: 0.9rem;
+	padding-top: 0.1rem;
+	padding-left: 0.75rem;
+}
+
+.gameinfo{
+	font-size: 0.9rem;
+	float:right;
+	padding-right: 0.75rem;
+}
+.gamerefresh{
+	font-size: 0.9rem;
+	float:right;
+	padding-right: 0.75rem;
+}
+// .pulldown{
+// 	text-align: center;
+// }
+
+.slider-slide {
+  min-height: 200px;
+}
+.total_write{
+	padding-bottom:50px;
+}
+
+.up_arrow{
+	position: relative;
+	padding-left: 25.45rem;
+	padding-top: 0.1rem;
+	bottom:19px;
+	height:60; 
+	width:120;
+}
+.footer_toolbar{
+	height: 100%;
+}
+.footer{
+	height: 10%;	
+}
+

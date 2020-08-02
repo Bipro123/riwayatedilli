@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <img class="home_head" src="../assets/icon/home_toolbar_head.png" width="75px" align="middle"/>
+    
+    <!-- <img class="gameinfo" src="../assets/icon/refresh.png" width="75px" align="middle" width="40px" (click)="doRefresh($event)"/> -->
+    <img class="gameinfo" src="../assets/icon/about.png" width="75px" align="middle" width="40px" (click)="presentModal(true)"/>    
+    <!-- <ion-icon name="md-paper-plane" width="100px"></ion-icon> -->
+  
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+  
+<ion-content color="secondary" padding >
+  <ion-slides>
+    <ion-slide>
+<ion-refresher slot="fixed" *ngIf="pulldown" (ionRefresh)="doRefresh($event)">
+<ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+      </ion-refresher-content>
+      </ion-refresher>
+           <ion-text class="pull_down" *ngIf="pulldown" style="padding-left:12.5%;">Please pull down to refresh content</ion-text> 
+           <img src="../assets/icon/hand.svg" *ngIf="pulldown" style="height:20%; padding-left:32%;">   
+  <div id="game-canvas"></div>
+  <!-- <img src="/assets/board.jpg" alt="" (click)="openCam()" /> -->
+  <!-- <ion-button  >Open Camera</ion-button> -->
+  <!-- <img src="{{image}}"> -->
+  <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher> -->
+</ion-slide>
+<ion-slide>
+    <app-chat></app-chat>
+</ion-slide>
+</ion-slides>
+</ion-content>
+
+
+
+<ion-footer class="footer">
+  <ion-toolbar  class="footer_toolbar" color="primary" (click)="presentModal(false)">
+    <div>
+      <img class="up_arrow" src="../assets/icon/up-arrow.svg"  height="20px"  />
+      </div>
+      <div class="footer_para"> 
+      <ion-text color="tertiary" class="total_write"><p class="parafoot">
+          <ion-text><b>{{classReference.postname}} : </b></ion-text><ion-text>{{classReference.postdesc}}</ion-text></p>
+      </ion-text>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+
